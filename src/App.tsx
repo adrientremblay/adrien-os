@@ -15,7 +15,7 @@ const App: Component = () => {
         <rect width="100%" height="100%" x="0" y="0" fill="url(#gr1)" />
         Sorry but this browser does not support inline SVG.
       </svg>
-      <Window />
+      <Window title="Campus Security Simulator" />
       <TaskBar />
     </>
   );

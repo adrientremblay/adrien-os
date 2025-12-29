@@ -1,3 +1,8 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
 body {
     margin: 0;
 }
@@ -13,4 +18,35 @@ body {
     justify-content: center;
     align-items: center;
     padding-right: 20px;
+}
+
+.title-bar-title {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-bar {
+    height: 30px;
+    width: 100%;
+    background: rgb(143, 143, 143);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.title-bar-title {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.title-bar-x {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
 }

@@ -1,6 +1,6 @@
 import interact from 'interactjs'
 
-export default () => {
+export default (props) => {
 
     const position = {x: 0, y: 0};
 
@@ -38,7 +38,18 @@ export default () => {
             }
         });
 
-  return <div class="draggable" style="border: 2px solid black; width: 500px ; height: 500px ; background: white">
-    Window
-  </div>;
+  return (
+    <div class="draggable" style="border: 2px solid black; width: 500px ; height: 500px ; background: white">
+        <div class="title-bar">
+            <div class="title-bar-title">
+                <b>
+                    {props.title}
+                </b>
+            </div>
+            <div class="title-bar-x">
+                <img src="/images/window-close.png" width="32px" height="32px"></img>
+            </div>
+        </div>
+    </div>
+  );
 };
