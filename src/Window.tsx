@@ -13,8 +13,7 @@ export default () => {
                 move: (e) => {
                     position.x += e.dx;
                     position.y += e.dy;
-                    e.target.style.transform =
-                        `translate(${position.x}px, ${position.y}px)`
+                    e.target.style.transform = `translate(${position.x}px, ${position.y}px)`
                 }
             }
         })
@@ -27,17 +26,17 @@ export default () => {
             },
             listeners: {
                 move: (e) => {
-                    let { x, y } = e.target.dataset
+                    //console.log("x: " + x + " y: " + y);
+                    //console.log("deltleft: " + e.deltaRect.left + " deltatop: " + e.deltaRect.top);
 
-                    x = (parseFloat(x) || 0) + e.deltaRect.left
-                    y = (parseFloat(y) || 0) + e.deltaRect.top
+                    position.x = (parseFloat(position.x) || 0) + e.deltaRect.left
+                    position.y = (parseFloat(position.y) || 0) + e.deltaRect.top
 
                     Object.assign(e.target.style, {
                     width: `${e.rect.width}px`,
                     height: `${e.rect.height}px`,
+                    transform: `translate(${position.x}px, ${position.y}px)`
                     })
-
-                    Object.assign(e.target.dataset, { x, y })
                 }
             }
         });
