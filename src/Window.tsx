@@ -7,9 +7,6 @@ export default () => {
     interact('.draggable')
         .draggable({
             listeners: {
-                start: (e) => {
-                    console.log(e.type, e.target);
-                },
                 move: (e) => {
                     position.x += e.dx;
                     position.y += e.dy;
